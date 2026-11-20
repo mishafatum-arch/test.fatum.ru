@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Оплата услуг — Фатум</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="styls.css?v=9">
+<link rel="stylesheet" href="payment.css?v=1">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body class="page-payment">
+
+<header class="header">
+  <a href="index.html" class="logo">
+    <span class="logo-text">Фатум</span>
+  </a>
+  <nav class="nav">
+    <a href="index.html#services">Услуги</a>
+    <a href="index.html#story">О нас</a>
+    <a href="index.html#contacts">Контакты</a>
+  </nav>
+  <div class="header-buttons">
+    <a href="index.html" class="btn-pay">← На главную</a>
+  </div>
+</header>
+
+<main class="payment-page">
+  <h1 class="payment-page__title">Оплата услуг</h1>
+  <p class="payment-page__lead">Оплатите интернет, резервный канал или другие услуги «Фатум» банковской картой онлайн.</p>
+  <p class="payment-page__secure">Безопасная оплата через ЮKassa</p>
+
+  <div class="fatum-payment">
+    <div class="fatum-payment__title">Оплата услуг связи</div>
+    <p class="fatum-payment__subtitle">Заполните данные — и вы перейдёте на защищённую страницу оплаты.</p>
+
+    <form class="fatum-payment__form" action="payment.php" method="post" accept-charset="utf-8" autocomplete="on">
+      <div class="fatum-block-title">О покупателе</div>
+
+      <input name="email" class="fatum-input" type="email" placeholder="Email"
+             autocomplete="email" maxlength="120" required>
+      <input name="phone" class="fatum-input" type="tel" placeholder="Телефон"
+             autocomplete="tel" inputmode="tel" maxlength="20">
+      <input name="name" class="fatum-input" type="text" placeholder="ФИО"
+             autocomplete="name" maxlength="120">
+      <textarea name="contract" class="fatum-input fatum-textarea"
+                placeholder="Номер договора" maxlength="60"></textarea>
+
+      <div class="fatum-payment__row">
+        <input name="sum" class="fatum-input fatum-sum" type="number" step="0.01"
+               min="1" max="150000" placeholder="Сумма, ₽" inputmode="decimal" required>
+        <button type="submit" class="fatum-btn">Оплатить</button>
+        <img src="https://yookassa.ru/integration/simplepay/img/iokassa-gray.svg?v=1.15.0"
+             class="fatum-logo" width="114" height="27" alt="ЮKassa">
+      </div>
+    </form>
+  </div>
+
+  <p class="payment-page__back"><a href="index.html">← Вернуться на главную</a></p>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <span class="footer-copy">© 1998 – 2026, «Фатум»</span>
+      <a href="index.html" class="footer-link">Главная</a>
+      <a href="soglasie.html" class="footer-link">Согласие на обработку персональных данных</a>
+      <a href="policy.html" class="footer-link">Политика конфиденциальности</a>
+    </div>
+    <div class="footer-right">420141, Казань, ул. Кул Гали, 24</div>
+  </div>
+</footer>
+
+</body>
+</html>

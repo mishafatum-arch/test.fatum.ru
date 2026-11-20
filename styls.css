@@ -61,6 +61,13 @@ body { font-family: 'Segoe UI', Arial, sans-serif; color: #222; }
 .nav a:hover::after {
   width: 100%;
 }
+.header-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+
 
 .btn-orange {
   background: #087BAE; color: #fff; border: none;
@@ -72,7 +79,38 @@ body { font-family: 'Segoe UI', Arial, sans-serif; color: #222; }
 .btn-orange:hover {
   transform: scale(1.06);           /* ← добавлено: +6% */
 }
+.btn-pay {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #087BAE;
+  border: 2px solid #087BAE;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .2s ease, background .2s ease, color .2s ease;
+}
 
+.btn-pay:hover {
+  transform: scale(1.06);
+  background: #087BAE;
+  color: #fff;
+}
+
+.header-buttons .btn-pay {
+  color: #087BAE !important;
+  border: 2px solid #087BAE !important;
+  background: transparent !important;
+}
+
+.header-buttons .btn-pay:hover {
+  color: #fff !important;
+  background: #087BAE !important;
+}
 /* Hero */
 .hero {
   background: #087BAE; color: #FFF9E6;
@@ -590,6 +628,7 @@ section[id] { scroll-margin-top: 90px; } /* чтобы шапка не пере�
 }
 
 /* ===== ФУТЕР ===== */
+/* ===== ФУТЕР ===== */
 .footer {
   background: #2b2b2b;
   color: #ccc;
@@ -616,6 +655,34 @@ section[id] { scroll-margin-top: 90px; } /* чтобы шапка не пере�
   opacity: .85;
 }
 
+/* --- Ссылки в футере --- */
+.footer-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+}
+
+.footer-left .footer-copy {
+  margin-right: 4px;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, .45);
+  text-underline-offset: 3px;
+  transition: color .2s, text-decoration-color .2s;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+  color: #fff;
+  text-decoration-color: #fff;
+  outline: none;
+}
+
+/* На узких экранах — ссылки столбиком, разделители не нужны */
 @media (max-width: 700px) {
   .footer {
     padding: 20px;
@@ -624,5 +691,13 @@ section[id] { scroll-margin-top: 90px; } /* чтобы шапка не пере�
   .footer-inner {
     flex-direction: column;
     gap: 8px;
+  }
+  .footer-left {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .footer-left .footer-copy {
+    margin-right: 0;
   }
 }
